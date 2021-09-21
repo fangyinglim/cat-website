@@ -87,15 +87,17 @@ li:hover::after {
     width: 15em;
     background: rgb(255, 251, 251);
     position: absolute;
-    top: 3em;
+    top: 2.1em;
     box-shadow: 0px 7px 5px -7px rgba(0, 0, 0, 0.514);
     border-radius: 1em;
 }
 
-#start > a {
+/* #start > a {
     position: relative;
     display: inline-block;
     padding:0.5em;
-}
+    border: 2px solid green;
+
+} */
 
 
