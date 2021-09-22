@@ -16,6 +16,10 @@
     --fc-greyblue: #88bdbc;
 
     --ff-main: 'Roboto', sans-serif;
+
+    --fs-xl: clamp(0.5rem, 6vw , 11rem);
+    --fs-med:  3rem;
+    --fs-small: 1rem;
 }
 
 body {
@@ -31,18 +35,21 @@ nav {
     position: relative;
 }
 
-h1 {
-    color: rgba(165, 19, 19, 0.822);
+header > h1 {
+    color: rgba(165, 19, 19, 0.8);
     display: flex;
     align-items: center;
     max-width: 250px;
     position:absolute;
     bottom: 0;
     top: 0;
+    margin-left: 1em;
     
 }
 
 .container {
+    /* border: 2px solid green; */
+
     height: 100%;
     width: 100%;
     display: flex;
@@ -57,6 +64,9 @@ h1 {
 li {
     padding: 0.3em;
     position: relative;
+    flex-shrink: 1;
+    /* border: 2px solid green; */
+
 }
 
 li > a {
@@ -83,21 +93,49 @@ li:hover::after {
 }
 
 .start-menu {
-    height: 10em;
-    width: 15em;
+    height: 15em;
+    width: 20em;
     background: rgb(255, 251, 251);
     position: absolute;
-    top: 2.1em;
+    top: 1.75em;
     box-shadow: 0px 7px 5px -7px rgba(0, 0, 0, 0.514);
     border-radius: 1em;
 }
 
-/* #start > a {
+img {
+    max-width: 100%;
+    height:auto;
+    opacity: 0.85;
+    margin-bottom: 0;
+    /* border: 2px solid green; */
+}
+
+#homepage {
     position: relative;
-    display: inline-block;
-    padding:0.5em;
-    border: 2px solid green;
+    /* border: 2px solid green; */
+    display: flex;
+    justify-content: center;
+}
 
-} */
 
+.home {
+    /* border: 2px solid green; */
+    color: var(--fc-lightgray);
+    font-size: var(--fs-xl);
+    position: absolute;
+    top: 2em;
+    padding-left: 0.5em;
+    z-index: 1;
+}
 
+.fullpage{
+    background: yellow;
+    /* border: 2px solid green; */
+    height: 100vh;
+    margin: 0;
+}
+
+h2 {
+    /* border: 2px solid green; */
+
+}
