@@ -18,8 +18,8 @@
     --ff-main: 'Roboto', sans-serif;
 
     --fs-xl: clamp(0.5rem, 6vw , 11rem);
-    --fs-med:  3rem;
-    --fs-small: 1rem;
+    --fs-med:  5vmin;
+    --fs-small: 0.5rem;
 }
 
 body {
@@ -93,17 +93,18 @@ li:hover::after {
 }
 
 .start-menu {
-    height: 15em;
-    width: 20em;
+    height: 20vmin;
+    width: 15vmax;
     background: rgb(255, 251, 251);
     position: absolute;
     top: 1.75em;
     box-shadow: 0px 7px 5px -7px rgba(0, 0, 0, 0.514);
     border-radius: 1em;
+    z-index: 1;
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     height:auto;
     opacity: 0.85;
     margin-bottom: 0;
@@ -115,9 +116,11 @@ img {
     /* border: 2px solid green; */
     display: flex;
     justify-content: center;
+    height: 100vh;
 }
 
 
+/*font size*/
 .home {
     /* border: 2px solid green; */
     color: var(--fc-lightgray);
@@ -128,6 +131,17 @@ img {
     z-index: 1;
 }
 
+@media screen and (max-width: 900px) {
+    #homepage {
+        height: auto;
+    }
+
+    .home {
+        font-size: var(--fs-med);
+    }
+
+}
+
 .fullpage{
     background: yellow;
     /* border: 2px solid green; */
@@ -135,7 +149,32 @@ img {
     margin: 0;
 }
 
-h2 {
-    /* border: 2px solid green; */
+#about-us > h2 {
+    position: absolute;
+}
 
+.flexbox {
+    /* border: 2px solid green; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.flexbox > img {
+    border: 2px solid green;
+    max-width:30%;
+    max-height: 50%
+
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
 }
