@@ -31,12 +31,14 @@
 <!-- 
         <img src="images/kittens-1920.jpg" 
             alt="picture of cat staring at you">
-         -->
-            
-        <img srcset="images/kitten-640.jpg 640w,
-                     images/kitten-1024.jpg 1024w "  
-             sizes="(max-width:640px) 640px, 1024px"
-             src="images/kitten-640.jpg">               
+         -->      
+        <picture>
+            <source media="(max-width: 640px)" srcset="images/kitten-640.jpg">
+            <source media="(max-width: 1024px)" srcset="images/kitten-1024.jpg">
+            <source media="(max-width: 1300px)" srcset="images/kitten-1920.jpg">
+            <img src="images/kitten-xl.jpg" alt="cat looking at you">
+        </picture>
+              
     </section>
 
 
